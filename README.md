@@ -3,6 +3,8 @@ Esse é um projeto desenvolvido em NodeJS onde é utilizado a api do Google para
 
 # Quick Start ▶️
 
+- [Planilha do Google Sheet](https://docs.google.com/spreadsheets/d/1F1z3g8zm5R4Eh1lvPoTlcd33EI000CY9rOSbzZnunao/edit#gid=0)
+
 1. Tenha certeza que você tem o [Node](https://nodejs.org/en/) instalado no seu computador.
 2. Clone o projeto em seu computador.
 3. Abra o **Terminal**  na pasta do projeto e execute o comando `npm install ` para instalar as dependências do projeto.
