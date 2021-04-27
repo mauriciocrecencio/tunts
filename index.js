@@ -1,6 +1,6 @@
 import { google } from "googleapis";
 import { GoogleAuth } from "google-auth-library";
-import checkStudents from "./utils/student/checkStudents.js";
+import checkStudents from "./utils/checkStudents.js";
 // If modifying these scopes, delete token.json.
 const scopes = ["https://www.googleapis.com/auth/spreadsheets"];
 
@@ -31,5 +31,16 @@ async function App() {
   const StudentsSituationAndFinalExamScore = checkStudents(
     getStudentsData.data.values
   );
+
+  // Update Sheet
+  await googleSheets.spreadsheets.values.update({
+    auth,
+    spreadsheetId,
+    range: `${sheetName}!G4:H`,
+    valueInputOption: "USER_ENTERED",
+    resource: {
+      values: StudentsSituationAndFinalExamScore,
+    },
+  });
 }
 App();
