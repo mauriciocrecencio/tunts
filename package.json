@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mauriciocrecencio/tunts/issues"
   },
-  "homepage": "https://github.com/mauriciocrecencio/tunts#readme"
+  "homepage": "https://github.com/mauriciocrecencio/tunts#readme",
+  "dependencies": {
+    "googleapis": "^39.2.0"
+  }
 }
