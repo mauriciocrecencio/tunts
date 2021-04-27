@@ -21,16 +21,4 @@ Sabendo disso, precisamos atualizar duas colunas da tabela:
 
 
 
-### Diagrama
-```mermaid
-graph LR
-A[Aluno] -- Mais que 15 faltas? --> B[Reprovado por falta] 
-A -- Menos que 15 faltas? --> C((Nota))
-C -- Maior que 70 ? --> G(Aprovado)
-C -- Maior ou igual a 50 e menor que 70? --> Z(Exame Final)
-C -- Menor que 50 ? --> S[Reprovado por nota]
-Z -- Calcular Nota para Aprovação Final --> L(5 <= m + naf/2)
-
-```
-
 
