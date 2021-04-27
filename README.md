@@ -17,6 +17,7 @@ A tabela em que estamos trabalhando é um conjunto de dados de alunos, e suas re
 
 Sabendo disso, precisamos atualizar duas colunas da tabela: 
 * **Situação** e  **Nota para Aprovação Final** 
+![image](https://user-images.githubusercontent.com/65139661/116183467-4c768980-a6f4-11eb-9339-47498eace6c2.png)
 
 
 
