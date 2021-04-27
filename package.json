@@ -1,0 +1,19 @@
+{
+  "name": "tunts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauriciocrecencio/tunts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mauriciocrecencio/tunts/issues"
+  },
+  "homepage": "https://github.com/mauriciocrecencio/tunts#readme"
+}
