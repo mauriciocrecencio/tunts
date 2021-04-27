@@ -8,7 +8,6 @@ Esse é um projeto desenvolvido em NodeJS onde é utilizado a api do Google para
 3. Abra o **Terminal**  na pasta do projeto e execute o comando `npm install ` para instalar as dependências do projeto.
 4. O comando`npm run clean` irá limpar as Linhas/Colunas do Sheets
 5. O comando `npm run update` irá atualizar a tabela do Sheets
-6. 
 
 > **OBS:** Se você tiver qualquer problema em instalar o **Node** ou alguma dúvida com o projeto, fique a vontade para me enviar mensagem!
 
