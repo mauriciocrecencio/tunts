@@ -6,7 +6,9 @@
   "type": "module",
 
   "scripts": {
-    "update" : "node ./index.js"
+    "update" : "node ./index.js",
+    "clean" : "node ./cleanSheet.js"
+
   },
   "repository": {
     "type": "git",
