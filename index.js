@@ -1,12 +1,13 @@
-import { google } from "googleapis";
 import { GoogleAuth } from "google-auth-library";
-import checkStudents from "./utils/checkStudents.js";
-// If modifying these scopes, delete token.json.
-const scopes = ["https://www.googleapis.com/auth/spreadsheets"];
-
-const keyFile = "credentials.json";
-const spreadsheetId = "1F1z3g8zm5R4Eh1lvPoTlcd33EI000CY9rOSbzZnunao";
-const sheetName = "engenharia_de_software";
+import checkStudents from "./utils/student/checkStudents.js";
+import getGoogleSheets from "./services/getGoogleSheets.js";
+import updateSheet from "./updateSheet.js";
+import {
+  scopes,
+  keyFile,
+  spreadsheetId,
+  sheetName,
+} from "./utils/constants.js";
 
 async function App() {
   const auth = new GoogleAuth({
@@ -14,11 +15,8 @@ async function App() {
     scopes,
   });
 
-  // Create client instance for auth
-  const client = await auth.getClient();
-
   // Instance of Google Sheets API
-  const googleSheets = google.sheets({ version: "v4", auth: client });
+  const googleSheets = await getGoogleSheets(auth);
 
   // Get rows of our sheets
   const getStudentsData = await googleSheets.spreadsheets.values.get({
@@ -33,14 +31,11 @@ async function App() {
   );
 
   // Update Sheet
-  await googleSheets.spreadsheets.values.update({
+  updateSheet(
+    StudentsSituationAndFinalExamScore,
     auth,
     spreadsheetId,
-    range: `${sheetName}!G4:H`,
-    valueInputOption: "USER_ENTERED",
-    resource: {
-      values: StudentsSituationAndFinalExamScore,
-    },
-  });
+    sheetName
+  );
 }
 App();
